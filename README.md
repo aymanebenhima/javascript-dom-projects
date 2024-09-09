@@ -28,6 +28,13 @@ Welcome to the **JavaScript DOM Projects** repository! 🎉 This collection of p
    - Build a weather application that fetches real-time data from an API.
    - Display current weather conditions for any location using DOM manipulation.
    - Enhance your skills in working with external APIs and asynchronous JavaScript.
+  
+6. **Galactic Object Sort & Search 🌌**
+
+   - Create a web app where users can sort and search a list of celestial objects.
+   - Implement dynamic sorting by size, mass, and distance.
+   - Utilize search functionality to filter objects in real-time.
+   - Learn how to manipulate and update the DOM interactively.
 
 ## Getting Started
 
