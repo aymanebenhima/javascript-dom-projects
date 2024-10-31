@@ -54,3 +54,12 @@ h1 {
 #item-list li.hidden {
     display: none;
 }
+
+#no-results {
+    color: #999
+}
+
+.highlight {
+    font-weight: bold;
+    background-color: yellow
+}

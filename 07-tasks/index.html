@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic intro in Fetch et Json</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h1>Basic intro in Fetch et Json</h1>
+    <h2>Liste des posts</h2>
+    <ul id="post-list"></ul>
+    <script>
+        // Requête pour récupérer les posts
+        const apiUrl = `https://jsonplaceholder.typicode.com/posts/`;
+        fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                const postList = document.getElementById('post-list');
+
+                data.slice(0, 100).forEach(post => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `Titre: ${post.title}`;
+                    postList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Oups une erreur est survenue',error.message));
+    </script>
+</body>
+</html>
